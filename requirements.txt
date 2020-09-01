@@ -1,4 +1,3 @@
-python
 flask-cors
 numpy
 newspaper3k
