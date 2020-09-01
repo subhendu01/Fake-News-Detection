@@ -6,4 +6,3 @@ pandas
 flask
 nltk
 gunicorn
-python
