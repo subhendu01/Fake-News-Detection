@@ -1,9 +1,9 @@
 # https://medium.com/analytics-vidhya/building-a-fake-news-classifier-deploying-it-using-flask-6aac31dfe31d
+# import os
+# import numpy as np
 import os
-import numpy as np
 from flask import Flask, request, render_template
 from flask_cors import CORS
-from sklearn import *
 import pickle
 import flask
 import newspaper
@@ -41,5 +41,7 @@ def predict():
     pred = model.predict([news])
     return render_template('index.html', prediction_text='"{}" NEWS'.format(pred[0]))
 
+#localhost run
 if __name__=='__main__':
-    app.run(host='0.0.0.0',debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port=port, debug=True, use_reloader=False)

@@ -1,3 +1,4 @@
+python-3.6.9
 flask-cors
 numpy
 newspaper3k
